@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/pablo_s/fitness">
+    <file>activity_row.ui</file>
+    <file>history.ui</file>
+    <file>record_activity_dialog.ui</file>
+    <file>window.ui</file>
+  </gresource>
+</gresources>

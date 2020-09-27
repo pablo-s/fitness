@@ -1,0 +1,7 @@
+data/com.github.pablo_s.fitness.desktop.in
+data/com.github.pablo_s.fitness.appdata.xml.in
+data/com.github.pablo_s.fitness.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+
