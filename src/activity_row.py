@@ -40,5 +40,8 @@ class ActivityRow(Gtk.ListBoxRow):
         self._date = activity.start_time().strftime('%d/%m/%Y')
         self._duration.set_label(str(activity.duration()).split('.')[0])
 
+    def hide_header(self):
+        self.set_header(None)
+
     def show_header(self):
         self.set_header(Gtk.Label(self._date))

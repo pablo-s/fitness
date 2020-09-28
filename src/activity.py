@@ -25,6 +25,9 @@ class Activity(GObject.Object):
         self._startTime = startTime
         self._duration = duration
 
+    def __lt__(self, anotherActivity):
+        return self.start_time() < anotherActivity.start_time()
+
     def name(self):
         return self._name
 

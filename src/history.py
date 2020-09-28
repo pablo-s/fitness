@@ -36,14 +36,17 @@ class History(Gtk.ScrolledWindow):
 
         self.model = Gio.ListStore.new(Activity)
         self.listbox.bind_model(self.model, self.create_activity_row)
-        self.listbox.set_header_func(self.test)
+        self.listbox.set_header_func(self.update_header)
 
     def add_new_record(self, activity):
-        self.model.append(activity)
+        self.model.insert_sorted(activity,
+                                 lambda a1, a2: a1 < a2)
 
     def create_activity_row(self, activity):
         return ActivityRow(activity)
 
-    def test(self, activityRow, activityRowAbove):
+    def update_header(self, activityRow, activityRowAbove):
         if activityRowAbove is None:
             activityRow.show_header()
+        else:
+            activityRow.hide_header()
